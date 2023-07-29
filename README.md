@@ -3,6 +3,6 @@ Non-blocking, use send and receive interrupt, support multiple serial ports.
 
 Use timers to separate single frame.
 
-IDE:CS+
+IDE: CS+
 
-MCU:RH850F1K
+MCU: RH850F1K
