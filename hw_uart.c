@@ -113,8 +113,8 @@ uint8_t uart_init(uint8_t ch, uint32_t baud)
     } else if (1 == ch) {
         /* TODO */
     } else if (2 == ch) {
-        QueueInit(&g_ch2TxQueue, g_ch2TxBuf, 1, sizeof(g_ch2TxBuf));
-        QueueInit(&g_ch2RxQueue, g_ch2RxBuf, 1, sizeof(g_ch2RxBuf));
+        queue_init(&g_ch2TxQueue, g_ch2TxBuf, 1, sizeof(g_ch2TxBuf));
+        queue_init(&g_ch2RxQueue, g_ch2RxBuf, 1, sizeof(g_ch2RxBuf));
         /* Set LIN reset mode */
         RLN32.LCUC = _UART_LIN_RESET_MODE_CAUSED;
         /* Disable ICRLIN32UR0 operation and clear request */
@@ -166,8 +166,8 @@ uint8_t uart_init(uint8_t ch, uint32_t baud)
         _ch2_start();
         ret = 0;
     }else if (3 == ch) {
-        QueueInit(&g_ch3TxQueue, g_ch3TxBuf, 1, sizeof(g_ch3TxBuf));
-        QueueInit(&g_ch3RxQueue, g_ch3RxBuf, 1, sizeof(g_ch3RxBuf));
+        queue_init(&g_ch3TxQueue, g_ch3TxBuf, 1, sizeof(g_ch3TxBuf));
+        queue_init(&g_ch3RxQueue, g_ch3RxBuf, 1, sizeof(g_ch3RxBuf));
         /* Set LIN reset mode */
         RLN33.LCUC = _UART_LIN_RESET_MODE_CAUSED;
         /* Disable ICRLIN33UR0 operation and clear request */
